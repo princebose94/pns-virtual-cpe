@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pns-virtual-cpe"
+version = "0.1.0"
+description = "A Python-based virtual CPE/network device simulator for testing and automation."
+requires-python = ">=3.9"
+
+[tool.setuptools]
+packages = ["pns"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
