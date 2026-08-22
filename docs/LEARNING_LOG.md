@@ -37,11 +37,12 @@ Refactored the device model to introduce `DeviceInfo`.
 
 Instead of putting all device information directly inside `Device`:
 
+```text
     Device
     ├── manufacturer
     ├── model
     └── serial number
-
+```
 the model now uses composition:
 
     Device
