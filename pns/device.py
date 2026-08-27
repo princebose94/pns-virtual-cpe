@@ -1,15 +1,18 @@
 import time
 from pns.device_info import DeviceInfo
+from pns.wifi import WiFi
 
 class Device:
     """Represents the virtual CPE."""
 
     def __init__(
             self,
-            device_info = None
+            device_info = None,
+            wifi = None
         ):
 
         self.device_info = device_info or DeviceInfo()
+        self.wifi = wifi or WiFi()
         self.start_time = time.time()
 
     def uptime(self):

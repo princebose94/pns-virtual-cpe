@@ -63,9 +63,17 @@ def test_device_uptime():
 
 
 def test_device_reboot():
+    
     device = Device()
 
     old_start_time = device.start_time
     device.reboot()
 
     assert device.start_time >= old_start_time
+
+
+def test_device_has_default_wifi():
+    device = Device()
+
+    assert device.wifi.radio.channel == 36
+    assert device.wifi.radio.enable is True
